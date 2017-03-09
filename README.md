@@ -93,4 +93,4 @@ export default class SecondVC extends Component {
 |  rightImgBtn2              | 
 |  rightBtn2Action           |
  
- ## If any bug found, please submit an issue!
+## If any bug found, please submit an issue!

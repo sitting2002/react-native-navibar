@@ -14,14 +14,15 @@ import {
 } from 'react-native';
 
 import SecondVC from './SecondVC.js';
+import ThirdVC from './ThirdVC.js';
 import NaviBar from './NaviBar.js';
 
 const webImg = 'https://static.ring.com/assets/static/fb-9609b1bfce739af883fa03a396743761.png';
 
 export default class FirstVC extends Component {
-    pushSecondVC() {
+    pushVC(vc) {
         this.props.navigator.push({
-            component: SecondVC,
+            component: vc,
         });
     }
 
@@ -44,9 +45,9 @@ export default class FirstVC extends Component {
 
                     rightTextBtn1 = 'SecondVC'
                     rightTextBtn1Color = '#f00'
-                    rightBtn1Action = {() => this.pushSecondVC()}
+                    rightBtn1Action = {() => this.pushVC(SecondVC)}
                     rightImgBtn2 = {{uri: webImg}}
-                    rightBtn2Action = {() => Alert.alert('rightBtn2Action')}
+                    rightBtn2Action = {() => this.pushVC(ThirdVC)}
                 />
                 <View style = {{flex: 1, justifyContent: 'center', alignItems: 'center',  backgroundColor: '#57d2f7'}}>
                     <Text>I am the FirstVC</Text>

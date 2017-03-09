@@ -101,13 +101,13 @@ export default class NaviBar extends Component {
                     <TouchableOpacity style = {styles.leftbuttonContainer} activeOpacity = {1} onPress = {this.props.leftBtn1Action}>
                         {this.setupButtonItem(this.props.leftTextBtn1, this.props.leftTextBtn1Color, this.props.leftImgBtn1)}
                     </TouchableOpacity> 
-                : null}
+                : <View style = {styles.leftbuttonContainer}></View>}
 
                 {this.props.leftTextBtn2 || this.props.leftImgBtn2 ? 
                     <TouchableOpacity style = {styles.leftbuttonContainer} activeOpacity = {1} onPress = {this.props.leftBtn2Action}>
                         {this.setupButtonItem(this.props.leftTextBtn2, this.props.leftTextBtn2Color, this.props.leftImgBtn2)}
                     </TouchableOpacity> 
-                : null}
+                : <View style = {styles.leftbuttonContainer}></View>}
 
                 {this.setupTitleView()}
 
@@ -115,13 +115,13 @@ export default class NaviBar extends Component {
                     <TouchableOpacity style = {styles.rightbuttonContainer} activeOpacity = {1} onPress = {this.props.rightBtn1Action}>
                         {this.setupButtonItem(this.props.rightTextBtn1, this.props.rightTextBtn1Color, this.props.rightImgBtn1)}
                     </TouchableOpacity> 
-                : null}
+                : <View style = {styles.rightbuttonContainer}></View>}
 
                 {this.props.rightTextBtn2 || this.props.rightImgBtn2 ? 
                     <TouchableOpacity style = {styles.rightbuttonContainer} activeOpacity = {1} onPress = {this.props.rightBtn2Action}>
                         {this.setupButtonItem(this.props.rightTextBtn2, this.props.rightTextBtn2Color, this.props.rightImgBtn2)}
                     </TouchableOpacity> 
-                : null}
+                : <View style = {styles.rightbuttonContainer}></View>}
             </View>
         );
     }
