@@ -1,6 +1,6 @@
 /**
  * reactNativeNavibar React Native App
- * https://github.com/facebook/react-native
+ * https://github.com/sitting2002/react-native-navibar
  * @flow
  * @create by Decade
  * @create date 20170307
@@ -23,7 +23,10 @@ export default class SecondVC extends Component {
     render() {
         return (
             <View style = {{flex: 1}}>
-                <NaviBar                    
+                <NaviBar
+                    StatusBarStyle = 'default'
+                    statusBarBackgroundColor = '#00f'                    
+                    
                     naviBackgroundColor = '#fff'
                     titleClickAction = {() => Alert.alert('It\'s facebook logo')}
                     titleImg = {{uri: titleImg}}

@@ -1,6 +1,6 @@
 /**
  * reactNativeNavibar React Native App
- * https://github.com/facebook/react-native
+ * https://github.com/sitting2002/react-native-navibar
  * @flow
  * @create by Decade
  * @create date 20170307
@@ -31,7 +31,7 @@ export default class FirstVC extends Component {
                 <NaviBar
                     StatusBarStyle = 'light-content'
                     statusBarBackgroundColor = '#00f'
-                    
+
                     title = 'i am the title'
                     titleClickAction = {() => Alert.alert('Title Click!')}
                     titleTextColor = '#f0f'

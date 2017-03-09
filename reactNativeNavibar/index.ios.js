@@ -1,6 +1,6 @@
 /**
  * reactNativeNavibar React Native App
- * https://github.com/facebook/react-native
+ * https://github.com/sitting2002/react-native-navibar
  * @flow
  * @create by Decade
  * @create date 20170307
