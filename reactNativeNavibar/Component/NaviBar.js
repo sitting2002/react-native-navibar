@@ -12,6 +12,12 @@
  * --NaviBar--
  * @props naviBackgroundColor
  * 
+ * --TitleView--
+ * @props title
+ * @props titleClickAction
+ * @props titleTextColor
+ * @props titleImg
+ * 
  * --LeftButtonGroup--
  * @props leftTextBtn1
  * @props leftTextBtn1Color
@@ -45,10 +51,12 @@ import {
     TouchableOpacity,
     StatusBar,
     Image,
+    Dimensions,
 } from 'react-native';
 
 const defaultBackgroundColor = '#eeeeee';
 const ButtonSize = 33;
+const screenWidth = Dimensions.get('window').width;
 
 export default class NaviBar extends Component {
     setupStatusBar() {
@@ -78,9 +86,9 @@ export default class NaviBar extends Component {
 
     setupTitleView() {
         return (
-            <View style = {{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#00f', height: ButtonSize, marginLeft: 16, marginRight: 16, marginTop: 10}}>
-                <Text style = {{fontSize: 20}} ellipsizeMode = 'tail' numberOfLines = {1}>i am the title title title</Text>
-            </View>
+            <TouchableOpacity style = {styles.titleView} activeOpacity = {1} onPress = {this.props.titleClickAction}>
+                {this.props.titleImg ? <Image style = {styles.titleImgStyle} resizeMode = 'contain' source = {this.props.titleImg}></Image> : <Text style = {[{color: this.props.titleTextColor}, styles.titleText]} ellipsizeMode = 'tail' numberOfLines = {1}>{this.props.title}</Text>}
+            </TouchableOpacity>
         );
     }
 
@@ -126,7 +134,6 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
     },
     leftbuttonContainer: {
-        backgroundColor: '#a0a0a0', 
         height: ButtonSize, 
         marginLeft: 16, 
         marginTop: 10,
@@ -134,7 +141,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     rightbuttonContainer: {
-        backgroundColor: '#a0a0a0', 
         height: ButtonSize, 
         marginRight: 16, 
         marginTop: 10,
@@ -143,5 +149,21 @@ const styles = StyleSheet.create({
     },
     textBtnStyle: {
         fontSize: 14,
+    },
+    titleView: {
+        flex: 1, 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        height: ButtonSize, 
+        marginLeft: 16, 
+        marginRight: 16, 
+        marginTop: 10,
+    },
+    titleText: {
+        fontSize: 20,
+    },
+    titleImgStyle: {
+        width: screenWidth*0.4, 
+        height: ButtonSize,
     }
 })
