@@ -94,3 +94,5 @@ export default class SecondVC extends Component {
 |  rightBtn2Action           |
  
 ## If any bug found, please submit an issue!
+
+## 中文说明：http://www.jianshu.com/p/24d703a98677
